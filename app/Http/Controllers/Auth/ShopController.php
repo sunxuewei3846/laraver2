@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\SendsPasswordResetEmails;
 
-class IndexController extends Controller
+class ShopController extends Controller
 {
     /*
     |--------------------------------------------------------------------------
@@ -20,14 +20,14 @@ class IndexController extends Controller
 
     public function index()
     {
-        return view('index.login');
+        // echo 111;
+        return view('shop.index');
     }
-    public function index_do()
-    {
-        print_r($_POST);
-    }
+    
+
     public function register()
     {
+        // echo "aewgfvSASvf";die;
         return view('index.register');
     }
 

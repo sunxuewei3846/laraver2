@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\SendsPasswordResetEmails;
 
-class IndexController extends Controller
+class ForgotPasswordController extends Controller
 {
     /*
     |--------------------------------------------------------------------------
@@ -18,19 +18,15 @@ class IndexController extends Controller
     |
     */
 
-    public function index()
-    {
-        return view('index.login');
-    }
-    public function index_do()
-    {
-        print_r($_POST);
-    }
-    public function register()
-    {
-        return view('index.register');
-    }
+    use SendsPasswordResetEmails;
 
-
-
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('guest');
+    }
 }

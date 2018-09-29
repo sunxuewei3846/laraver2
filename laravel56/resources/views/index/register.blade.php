@@ -8,8 +8,8 @@
 
 
 		<!-- <base href="./user"> -->
-			<img src="./user/image/mistorve_logo.png" alt="">
-
+			<!-- <img src="{{URL::asset('mistorve_logo.png')}}./user/image/mistorve_logo.png" alt=""> -->
+<img src="./user/image/mistorve_logo.png" alt="">
 
 	</head>
 	<body>

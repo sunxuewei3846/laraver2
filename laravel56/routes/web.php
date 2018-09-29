@@ -21,7 +21,7 @@ Route::get("/", "Auth\IndexController@index");
 Route::get('hello', function () {
     return view('hello');
 });
-
+Route::post('index/index_do','Auth\IndexController@index_do');
 Route::get('index/register','Auth\IndexController@register');
 
 Route::post('shop/index','Auth\ShopController@index');
