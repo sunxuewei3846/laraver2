@@ -15,7 +15,7 @@
 				<a href="./index.html" target="_blank"><img src="./user/image/mistore_logo.png" alt=""></a>
 			</div>
 		</div>
-		<form  method="post" action="{{url('shop/index')}}" class="form center">
+		<form  method="post" action="{{url('index/index_do')}}" class="form center">
 
 					<input type="hidden" name="_token" value="{{csrf_token()}}">
 

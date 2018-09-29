@@ -23,6 +23,8 @@ class ShopController extends Controller
         // echo 111;
         return view('shop.index');
     }
+    
+
     public function register()
     {
         // echo "aewgfvSASvf";die;

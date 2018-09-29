@@ -24,7 +24,6 @@ class IndexController extends Controller
     }
     public function register()
     {
-        // echo "aewgfvSASvf";die;
         return view('index.register');
     }
 
