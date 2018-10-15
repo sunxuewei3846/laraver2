@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\Services\UserService;
 use App\Http\Controllers\Controller;
-use App\Models\User;
+// use App\Models\User;
+use Illuminate\Foundation\Auth\SendsPasswordResetEmails;
+use App\Services\UserService;
 use Illuminate\Support\Facades\DB;
 use Request;
 

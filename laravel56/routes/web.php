@@ -46,9 +46,5 @@ Route::group(['middleware' => ['web']], function () {
 	// 订单
 	Route::any('shop/dingdanzhongxin','Auth\ShopController@dingdanzhongxin');
 
-
-Route::get('a/a', function () {
-    return view('index/welcome');
-});
 });
 

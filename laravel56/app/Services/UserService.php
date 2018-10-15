@@ -1,7 +1,7 @@
 <?php
 namespace App\Services;
 
-use App\Models\User;
+use App\Models\UserName;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Jobs\job;
@@ -37,7 +37,7 @@ class UserService extends Controller
 			return 4; //4：确认密码与密码不一致
 		}
 		// print_r($data);die;
-		$userObject = new User;//userObject  用户对象
+		$userObject = new UserName;//userObject  用户对象
 		$mobile = $userObject->select('mobile',$data['mobile']);
 		if (count($mobile) != 0) {
 			return 2; //2：数据库里已存在该手机号
@@ -69,7 +69,7 @@ class UserService extends Controller
 	{
 		$data['username_a'] = $user['username_a'];
 		$data['password'] = md5($user['password']);
-		$userObject = new User;//userObject  用户对象
+		$userObject = new UserName;//userObject  用户对象
 		// 判断是否是手机号登陆
 		$mobile = $userObject->landingelect('mobile',$data);
 		if (count($mobile) == 1) {

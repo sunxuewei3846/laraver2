@@ -21,7 +21,7 @@
 			</div>
 		</div>
 		<form action="{{url('index/landingOperation')}}"  method="post" class="form center">
-					
+						
 					{{ csrf_field() }}
 					<meta name="csrf-token" content="{{ csrf_token() }}">
 

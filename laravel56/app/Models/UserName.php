@@ -4,7 +4,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 
-class User extends Model
+class UserName extends Model
 {
 	public function add($data)
 	{
@@ -13,13 +13,11 @@ class User extends Model
 		}
 
 		return $this->save();
-		// return $this->field();
 	}
 
 	public function select($lie,$where)
 	{
 		return DB::table('user')->where($lie,$where)->get();
-		// return $where;
 	}
 
 	public function amend($u_id,$time)

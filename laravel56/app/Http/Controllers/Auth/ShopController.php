@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Foundation\Auth\SendsPasswordResetEmails;
-use Request;
 use App\Services\ShopService;
+use Illuminate\Support\Facades\DB;
+use Request;
 
 class ShopController extends Controller
 {
@@ -26,7 +26,9 @@ class ShopController extends Controller
     {
         error_reporting( E_ALL&~E_NOTICE );
         // 取session里的值
-        // print_r(session('name')); 
+        $session = session('name');
+        $name = $session[0];
+        // print_r($name); die;
         $shop = new ShopService;
         $commodityType = $shop->ShopType();
         // print_r($arr);
@@ -43,14 +45,6 @@ class ShopController extends Controller
         return view('shop.index',['array' => $array],['xiaomiStarItems' => $xiaomiStarItems]);
         
         // die;
-
-
-
-
-
-
-
-
 
 
         // // print_r($request->cookie('u_id'));die;
